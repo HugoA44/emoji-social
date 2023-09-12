@@ -44,6 +44,7 @@ export const AddPost = () => {
         }}
       >
         <TextField
+        fullWidth
           type="text"
           label="Pseudo"
           value={formData.username}
@@ -52,8 +53,11 @@ export const AddPost = () => {
           }
         />
         <TextField
+        fullWidth
           type="text"
-          label="Émoji"
+          label="Texte"
+          multiline
+          rows={4}
           value={formData.text}
           onChange={(event) =>
             setFormData({ ...formData, text: event.target.value })
